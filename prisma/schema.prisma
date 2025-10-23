@@ -8,7 +8,7 @@ datasource db {
 }
 
 enum UserRole {
-  employeeee
+  employee
   manager
 }
 
@@ -26,7 +26,7 @@ model User {
   email String @unique
   password String
 
-  role UserRole @default(employeeee)
+  role UserRole @default(employee)
   refunds Refunds[]
 
   createdAt DateTime @default(now()) @map("created_at")
